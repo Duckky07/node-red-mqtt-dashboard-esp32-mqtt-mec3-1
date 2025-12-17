@@ -3,21 +3,15 @@
 #include <PubSubClient.h>
 
 
-
-
+int distance = 0;
 // ------------------- PIN -------------------
 int relaypin = 17;
 int OUT_PIN = 34;
-int distance = 0;
-
-
 
 
 // ------------------- WiFi -------------------
 const char* ssid = "Pach_2.4G";  //ชื่อWiFii
 const char* password = "0851944933";  //ใส่รหัสWiFii
-
-
 
 
 // ------------------- HiveMQ -------------------
@@ -27,20 +21,14 @@ const char* mqtt_user = "TEST123"; //ใส่ตามคลิป
 const char* mqtt_pass = "1234567890Qa"; //ใส่ตามคลิป
 
 
-
-
 WiFiClientSecure espClient;
 PubSubClient client(espClient);
-
-
 
 
 // ------------------- MQTT CALLBACK -------------------
 void callback(char* topic, byte* payload, unsigned int length) {
   String val = "";
   for (int i = 0; i < length; i++) val += (char)payload[i];
-
-
 
 
   Serial.print("MQTT Received: ");
@@ -60,24 +48,13 @@ void callback(char* topic, byte* payload, unsigned int length) {
 }
 
 
-
-
 // ------------------- SETUP -------------------
 void setup() {
   Serial.begin(115200);
 
 
-
-
   pinMode(relaypin, OUTPUT);
   pinMode(OUT_PIN, INPUT);
-
-
-
-
-
-
-
 
   // WiFi
   WiFi.mode(WIFI_STA);
@@ -90,20 +67,13 @@ void setup() {
   Serial.println("\nเชื่อม WiFi แล้ว");
 
 
-
-
   // MQTT
   espClient.setInsecure();
   client.setServer(mqtt_server, mqtt_port);
   client.setCallback(callback);
 
-
-
-
   reconnect();
 }
-
-
 
 
 // ------------------- MQTT RECONNECT -------------------
@@ -121,33 +91,20 @@ void reconnect() {
   }
 }
 
-
-
-
 // ------------------- LOOP -------------------
 void loop() {
   if (!client.connected()) reconnect();
   client.loop();
 
-
-
-
   distance = analogRead(OUT_PIN);
-
-
-
 
   Serial.print("Distance: ");
   Serial.print(distance);
   Serial.println(" mm");
 
 
-
-
   String msg = String(distance);
   client.publish("TOPIC", msg.c_str());   // แก้ใส่ TOPIC ของ Ultrasonic ส่งค่าไป Node-RED
-
-
 
 
   delay(500);
