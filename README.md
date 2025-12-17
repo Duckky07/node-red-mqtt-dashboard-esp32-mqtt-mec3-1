@@ -1,6 +1,13 @@
 # node-red-mqtt-dashboard-esp32-mqtt-mec3-1
 node-red-mqtt-dashboard-esp32-mqtt-mec3/1
 
+## 🎥 Video HOW TO
+[PTM & LDR](https://youtu.be/gHI3x-z1ghA)
+
+[PTM](https://youtu.be/K4qrUoOpoVU)
+
+[Ultrasonic](https://youtu.be/wFehvZayqZc)
+
 # Node-RED MQTT Dashboard
 
 This project demonstrates how to connect Arduino ESP32 with Node-RED
