@@ -4,7 +4,7 @@ node-red-mqtt-dashboard-esp32-mqtt-mec3/1
 ## 🎥 Video HOW TO
 [PTM & LDR](https://youtu.be/gHI3x-z1ghA)
 
-[PTM](https://youtu.be/K4qrUoOpoVU)
+[DHT](https://youtu.be/K4qrUoOpoVU)
 
 [Ultrasonic](https://youtu.be/wFehvZayqZc)
 
