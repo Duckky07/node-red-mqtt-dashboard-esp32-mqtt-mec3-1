@@ -3,20 +3,14 @@
 #include <PubSubClient.h>
 
 
-
-
 // ------------------- PIN -------------------
 int relaypin = 17;
 int ldrPin = 34;  // ใช้ ADC ขา 32/33/34/35/36/39 เท่านั้น (ESP32)
 
 
-
-
 // ------------------- WiFi -------------------
 const char* ssid = "Pach_2.4G";       //ชื่อไวไฟ
 const char* password = "0851944933";  //รหัส
-
-
 
 
 // ------------------- HiveMQ -------------------
@@ -26,12 +20,8 @@ const char* mqtt_user = "LED5555";                                              
 const char* mqtt_pass = "0618610886Yg";                                           //ใส่ตามคลิป
 
 
-
-
 WiFiClientSecure espClient;
 PubSubClient client(espClient);
-
-
 
 
 // ------------------- MQTT CALLBACK -------------------
@@ -40,12 +30,8 @@ void callback(char* topic, byte* payload, unsigned int length) {
   for (int i = 0; i < length; i++) val += (char)payload[i];
 
 
-
-
   Serial.print("MQTT Received: ");
   Serial.println(val);
-
-
 
 
   if (val == "1") {
@@ -71,14 +57,10 @@ void setup() {
   }
 
 
-
-
   Serial.println("\nเชื่อม WiFi แล้ว");
   espClient.setInsecure();
   client.setServer(mqtt_server, mqtt_port);
   client.setCallback(callback);
-
-
 
 
   reconnect();
@@ -100,7 +82,6 @@ void reconnect() {
   }
 }
 
-
 // ------------------- LOOP -------------------
 void loop() {
   if (!client.connected()) reconnect();
@@ -114,6 +95,3 @@ void loop() {
   client.publish("TOPIC", msg.c_str());  // แก้ใส่ TOPIC ของ LDR ส่งค่าไป Node-RED
   delay(500);
 }
-
-
-
