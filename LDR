@@ -89,7 +89,8 @@ void loop() {
 
 
   int value = analogRead(ldrPin);
-
+  Serial.print("Val: ");
+  Serial.print(ldrPin);
 
   String msg = String(value);
   client.publish("TOPIC", msg.c_str());  // แก้ใส่ TOPIC ของ LDR ส่งค่าไป Node-RED
