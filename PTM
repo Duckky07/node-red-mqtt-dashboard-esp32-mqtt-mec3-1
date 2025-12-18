@@ -3,7 +3,7 @@
 #include <PubSubClient.h>
 
 // ------------------- PIN -------------------
-int relaypin = 17;
+int relaypin = 17; //relay หรือ led
 int ptmPin = 34;  // ใช้ ADC ขา 32/33/34/35/36/39 เท่านั้น (ESP32)
 
 // ------------------- WiFi -------------------
