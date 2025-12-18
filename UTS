@@ -3,10 +3,10 @@
 #include <PubSubClient.h>
 
 
-int distance = 0;
+int distance = 0; //อย่าไปเปลี่ยนค่า
 // ------------------- PIN -------------------
-int relaypin = 17;
-int OUT_PIN = 34;
+int relaypin = 17; //relay หรือ led
+int OUT_PIN = 34; // ขา OUT
 
 
 // ------------------- WiFi -------------------
