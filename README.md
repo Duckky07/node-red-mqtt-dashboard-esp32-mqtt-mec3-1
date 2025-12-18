@@ -11,11 +11,11 @@ node-red-mqtt-dashboard-esp32-mqtt-mec3/1
 ## 🎥 Video FIX
 [VDO](https://youtu.be/JykMyjJEKr4)
  
-## BUTTON VALUE
+## BUTTON PAYLOAD
 - LED
   NO = 1
   OFF = 0
-  --------------------
+  
 - RELAY
   NO = 0
   OFF = 1
