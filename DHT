@@ -113,7 +113,7 @@ void loop() {
 
 
   // ส่ง MQTT
-  client.publish("TOPIC", String(t).c_str()); // แก้TOPIC ของ Temp
+  client.publish("TOPIC", String(t).c_str()); // แก้TOPIC ของ Temp ส่วนนี้ใช้หรือไม่ใช้ก้ได้ ถ้าไม่ใช้ใส่ // หน้า client.publish 
   client.publish("TOPIC", String(h).c_str()); // แก้TOPIC ของ °C
 
 
