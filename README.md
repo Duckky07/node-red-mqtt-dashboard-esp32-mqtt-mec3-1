@@ -10,7 +10,15 @@ node-red-mqtt-dashboard-esp32-mqtt-mec3/1
 
 ## 🎥 Video FIX
 [VDO](https://youtu.be/JykMyjJEKr4)
-
+ 
+## BUTTON VALUE
+- LED
+  NO = 1
+  OFF = 0
+  --------------------
+- RELAY
+  NO = 0
+  OFF = 1
 # Node-RED MQTT Dashboard
 
 This project demonstrates how to connect Arduino ESP32 with Node-RED
