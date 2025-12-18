@@ -2,8 +2,9 @@
 #include <WiFiClientSecure.h>
 #include <PubSubClient.h>
 
+int distance = 0; //อย่าไปยุ่ง กำหนดค่าเฉยๆ
 
-int distance = 0; //อย่าไปเปลี่ยนค่า
+
 // ------------------- PIN -------------------
 int relaypin = 17; //relay หรือ led
 int OUT_PIN = 34; // ขา OUT
