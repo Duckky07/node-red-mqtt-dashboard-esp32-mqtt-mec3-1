@@ -36,10 +36,10 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
   if (val == "1") {
     digitalWrite(relaypin, HIGH);
-    Serial.println("LED -> OFF");
+    Serial.println("LED -> ON");
   } else if (val == "0") {
     digitalWrite(relaypin, LOW);
-    Serial.println("LED -> ON");
+    Serial.println("LED -> OFF");
   }
 }
 
