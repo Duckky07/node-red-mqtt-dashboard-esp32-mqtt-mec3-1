@@ -9,7 +9,7 @@ node-red-mqtt-dashboard-esp32-mqtt-mec3/1
 [Ultrasonic](https://youtu.be/wFehvZayqZc)
 
 ## 🎥 Video FIX
-[FIX](https://youtu.be/JykMyjJEKr4)
+[VDO](https://youtu.be/JykMyjJEKr4)
 
 # Node-RED MQTT Dashboard
 
